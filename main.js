@@ -1,3 +1,5 @@
+// https://youtu.be/rRgD1yVwIvE
+
 var companies = [
   {name: "Company One", category: "Finance", start: 1981, end: 2003},
   {name: "Company Two", category: "Retail", start: 1992, end: 2008},
@@ -23,7 +25,9 @@ companies.forEach(function(company) {
   // console.log(company);
 });
 
-// FILTER =====================================================================
+// FILTER =========FILTER =========FILTER =========FILTER =========FILTER =========FILTER =========FILTER =========
+
+//return true if item is matches
 
 var canDrink = [];
 for (var i = 0; i < ages.length; i++) {
@@ -33,11 +37,17 @@ for (var i = 0; i < ages.length; i++) {
 };
 // console.log(canDrink);
 
+
+
 var drinker = ages.filter(function(age) {
   if (age >= 21) {
     return true;
   }
 });
+
+var tieOneOn = ages.filter(age => age >= 21);
+
+// console.log('Tie One On: ', tieOneOn);
 
 // console.log(drinker);
 
@@ -67,7 +77,9 @@ var eComp = companies.filter(comp => comp.start >= 1980 && comp.start < 1990);
 // console.log(eComp);
 
 
-// MAP ====================================================================
+// MAP ===========MAP ===========MAP ===========MAP ===========MAP ===========MAP ===========MAP ===========
+// returns array of each item modified as instructed
+
 
 // create array of company names
 
@@ -132,15 +144,46 @@ var totalYears = companies.reduce(function(total, company) {
 var totYears = companies.reduce((total, company) => total + (company.end - company.start), 0);
 
 
-// console.log(totYears);
+ // console.log(totYears);
 
 
 var combined = ages
   .map(age => age * 2) // Multiply Ages by 2
   .filter(age => age >= 40) // filter out ages under 40
   .reduce((a, b) => a + b, 0);  // add all of the ages together
-  console.log(combined);  // 798
+  // console.log(combined);  // 798
 
 
+
+  var robots = [
+    {
+      name: "x13",
+      canFly: true,
+      canCook: false,
+      yearsInspected: [2002],
+      fueledBy: "cookies",
+      bestFriend: { name: "z09", yearsKnown: 4, isCharging: true },
+    },
+    {
+      name: "z09",
+      canFly: false,
+      canCook: true,
+      yearsInspected: [1998, 2005, 2018],
+      fueledBy: "jealousy",
+      bestFriend: { name: "r04", yearsKnown: 12, isCharging: false },
+    },
+    {
+      name: "r3d2",
+      canFly: true,
+      canCook: true,
+      yearsInspected: [1977, 1980, 1983, 1999, 2002, 2005],
+      fueledBy: "beep-boop",
+      bestFriend: { name: "c4p0", yearsKnown: 2, isCharging: true },
+    },
+  ];
+
+  fucntion robotNamesInspectedAtLeastTwice() {
+
+  };
 
 
