@@ -1,5 +1,7 @@
 // https://youtu.be/rRgD1yVwIvE
 
+var Tuesday = '12-13-2022';
+
 var companies = [
   {name: "Company One", category: "Finance", start: 1981, end: 2003},
   {name: "Company Two", category: "Retail", start: 1992, end: 2008},
